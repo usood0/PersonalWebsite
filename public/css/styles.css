@@ -1,3 +1,7 @@
+body{
+    background-color: whitesmoke;
+}
+
 h1{
     color: red;
     text-align: center;
@@ -20,4 +24,8 @@ img{
 .col-sm-4{
     margin: 5px 5px 5px 5px;
     padding: 5px 5px 5px 5px;
+}
+
+.fa{
+    color: aliceblue;
 }
