@@ -59,6 +59,22 @@ app.post('/getMessage', (req, res) =>{
         email: req.body.email,
         message: req.body.message
     }
+    new Message(newMessage).save()
+    .then(() =>{
+        res.render('inbox');
+    });
+});
+
+app.get('/displayMessage', (req, res) => {
+    Message.find({}, (err, messages) => {
+        if(err){
+            console.log(err);
+        }else{
+            res.render('displayMessage', {
+                messages:messages
+            })
+        }
+    })
 });
 
 app.get('/experience', (req, res) => {
