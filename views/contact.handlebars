@@ -1,21 +1,22 @@
 <div class="container">
     <h1>Contact me</h1>
-    <form action="/getMessage" method="POST">
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" 
-            id="name" name="name" placeholder="Enter your name">
+    <div class="row">
+        <div class="col-sm-4">
+            <form action="/getMessage" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                    <small id="emailHelp" class="form-text text-muted">Don't worry, I won't share your e-mail</small>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="message" placeholder="Type message ..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" class="form-control" 
-            id="email" name="email" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">Don't worry, I won't share your e-mail</small>
-        </div>
-        <div class="form-group">
-            <textarea class="form-control" name="message"
-            placeholder="Type message ..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send</button>
-    </form>
+    </div>
 </div>
